@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <link href="style_421.css" rel="stylesheet"/>
+        <title>421</title>
+    </head>
+    <body>
+        <div id="game_background">
+            <div id="quatre_deux_un">
+                <img src="image/dé_face_quatre.png" alt="dé" />
+                <img src="image/dé_face_deux.png" alt="dé" />
+                <img src="image/dé_face_un.png" alt="dé" />
+            </div>
+
+            <div id="renseignements">
+                <div id="nombre_joueur">
+                    <input id="recuperer_nombre_joueur" type="text" placeholder="Quel est le nombre de joueurs ?" />
+                    <input id="confirmer_nombre_joueur" type="button" value="Confirmer" />
+                </div>
+                
+                <div id="nom_joueur">
+                    <input id="recuperer_nom_joueur" type="text" maxlength="15" placeholder="Quel est le nom du joueur ?" onkeydown="if(event.keycode==32) return false;" />
+                    <input id="confirmer_nom_joueur" type="button" value="Confirmer" />
+                </div>
+            </div>
+            
+            <div id="afficher_joueurs">
+                <p id="titre_afficher_joueurs"></p>
+                <h4 id="liste_x_joueurs">Liste des joueurs : </h4>
+                <ul id="afficher_liste_joueurs"></ul>
+            </div>
+            
+            <div id="action_bouton">
+                <input id="suivant" type="button" value="Suivant" onclick="actionSuivant()" />
+                <input id="retour" type="button" value="Retour" onclick="actionRetour()" />
+            </div>
+            
+            <div id="zone_jeu">
+                <div id="affichage_des">
+                    <div><img id="de_un" src="image/dé_face_quatre.png" /></div>
+                    <div><img id="de_deux" src="image/dé_face_deux.png" /></div>
+                    <div><img id="de_trois" src="image/dé_face_un.png" /></div>
+                </div>
+                
+                <div id="input_checkbox">
+                    <div><label for="checkbox_un"></label><input id="checkbox_un" name="checkbox_un" type="checkbox" value="Dé n°1" /></div>
+                    <div><label for="checkbox_deux"></label><input id="checkbox_deux" name="checkbox_deux" type="checkbox" value="Dé n°2" /></div>
+                    <div><label for="checkbox_trois"></label><input id="checkbox_trois" name="checkbox_trois" type="checkbox" value="Dé n°3" /></div>
+                </div>
+                
+                <div id="label_variable">Label variable</div>
+                
+                <div id="bouton_validation">
+                    <input id="oui" type="button" value="Oui" />
+                    <input id="non" type="button" value="Non" />
+                </div>
+            </div>
+
+            <div id="infobulle">
+                <div id="regle_jeu"><p>Règles du jeu</p></div>
+                <div id="texte_regle">
+                    <h4><u>Règle du jeu :</u></h4>
+                    <p>
+                    Les joueurs lancent les dés tour à tour en respectant l'ordre de saisie des joueurs à l'inscription.<br/>
+                    Pour l’ordre et la valeur des combinaisons, voir la partie "Classement des combinaisons". Sachez que le 421 est le meilleur score.<br/>
+                    Pour gagner une manche, il faut avoir le meilleur classement possible.
+                    </p>
+                    <p>
+                    Le premier joueur inscrit à la possibilité de jouer à 3 reprises et débute en lançant tous les dés.<br/>
+                    Il peut s'arrêter avant, ce qui obligera les joueurs suivants à respecter le même nombre de lancer.<br/>
+                    Si un joueur fait le score le plus faible, Nénette (221), la manche de celui-ci se termine automatiquement.
+                    </p>
+                    <p>
+                    Le joueur avec le meilleur score pourra débuter la manche suivante.
+                    </p>
+                </div>
+                
+                <div id="ordre_combinaison"><p>Ordre des combinaisons</p></div>
+                <div id="texte_ordre">
+                    <h4><u>Classement des combinaisons :</u></h4>
+                    <table>
+                        <tr> 
+                            <td>N°1</td>
+                            <td><img src="image/dé_face_quatre.png" alt="dé" /><img src="image/dé_face_deux.png" alt="dé" /><img src="image/dé_face_un.png" alt="dé" /></td>
+                        </tr>
+                        <tr>
+                            <td>N°2</td>
+                            <td><img src="image/dé_face_un.png" alt="dé" /><img src="image/dé_face_un.png" alt="dé" /><img src="image/dé_face_un.png" alt="dé" /></td>
+                        </tr>
+                        <tr>
+                            <td>N°3</td>
+                            <td><img src="image/dé_face_six.png" alt="dé" /><img src="image/dé_face_un.png" alt="dé" /><img src="image/dé_face_un.png" alt="dé" /></td>
+                        </tr>
+                        <tr>
+                            <td>N°4</td>
+                            <td><img src="image/dé_face_six.png" alt="dé" /><img src="image/dé_face_six.png" alt="dé" /><img src="image/dé_face_six.png" alt="dé" /></td>
+                        </tr>
+                        <tr>
+                            <td>N°5</td>
+                            <td><img src="image/dé_face_cinq.png" alt="dé" /><img src="image/dé_face_un.png" alt="dé" /><img src="image/dé_face_un.png" alt="dé" /></td>
+                        </tr>
+                        <tr>
+                            <td>N°6</td>
+                            <td><img src="image/dé_face_cinq.png" alt="dé" /><img src="image/dé_face_cinq.png" alt="dé" /><img src="image/dé_face_cinq.png" alt="dé" /></td>
+                        </tr>
+                        <tr>
+                            <td>N°7</td>
+                            <td><img src="image/dé_face_quatre.png" alt="dé" /><img src="image/dé_face_un.png" alt="dé" /><img src="image/dé_face_un.png" alt="dé" /></td>
+                        </tr>
+                        <tr>
+                            <td>N°8</td>
+                            <td><img src="image/dé_face_quatre.png" alt="dé" /><img src="image/dé_face_quatre.png" alt="dé" /><img src="image/dé_face_quatre.png" alt="dé" /></td>
+                        </tr>
+                        <tr>
+                            <td>N°9</td>
+                            <td><img src="image/dé_face_trois.png" alt="dé" /><img src="image/dé_face_un.png" alt="dé" /><img src="image/dé_face_un.png" alt="dé" /></td>
+                        </tr>
+                        <tr>
+                            <td>N°10</td>
+                            <td><img src="image/dé_face_trois.png" alt="dé" /><img src="image/dé_face_trois.png" alt="dé" /><img src="image/dé_face_trois.png" alt="dé" /></td>
+                        </tr>
+                        <tr>
+                            <td>N°11</td>
+                            <td><img src="image/dé_face_deux.png" alt="dé" /><img src="image/dé_face_un.png" alt="dé" /><img src="image/dé_face_un.png" alt="dé" /></td>
+                        </tr>
+                        <tr>
+                            <td>N°12</td>
+                            <td><img src="image/dé_face_deux.png" alt="dé" /><img src="image/dé_face_deux.png" alt="dé" /><img src="image/dé_face_deux.png" alt="dé" /></td>
+                        </tr>
+                        <tr>
+                            <td>N°13</td>
+                            <td><img src="image/dé_face_six.png" alt="dé" /><img src="image/dé_face_cinq.png" alt="dé" /><img src="image/dé_face_quatre.png" alt="dé" /></td>
+                        </tr>
+                        <tr>
+                            <td>N°14</td>
+                            <td><img src="image/dé_face_cinq.png" alt="dé" /><img src="image/dé_face_quatre.png" alt="dé" /><img src="image/dé_face_trois.png" alt="dé" /></td>
+                        </tr>
+                        <tr>
+                            <td>N°15</td>
+                            <td><img src="image/dé_face_quatre.png" alt="dé" /><img src="image/dé_face_trois.png" alt="dé" /><img src="image/dé_face_deux.png" alt="dé" /></td>
+                        </tr>
+                        <tr>
+                            <td>N°16</td>
+                            <td><img src="image/dé_face_trois.png" alt="dé" /><img src="image/dé_face_deux.png" alt="dé" /><img src="image/dé_face_un.png" alt="dé" /></td>
+                        </tr>
+                        <tr>
+                            <td>Autres</td>
+                            <td id="score_665-"><img src="image/dé_face_six.png" alt="dé" /><img src="image/dé_face_six.png" alt="dé" /><img src="image/dé_face_cinq.png" alt="dé" /> et -</td>
+                        </tr>
+                        <tr>
+                            <td>Nénette</td>
+                            <td><img src="image/dé_face_deux.png" alt="dé" /><img src="image/dé_face_deux.png" alt="dé" /><img src="image/dé_face_un.png" alt="dé" /></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            
+            <script src="0_global.js"></script>
+            <script src="1_renseignements.js"></script>
+            <script src="2_bouton.js"></script>
+            <script src="3_jouer.js"></script>
+            <script src="4_classement.js"></script>
+        </div>
+    </body>
+</html>
